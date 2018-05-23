@@ -26,7 +26,7 @@ class AutoRestrictBot(object):
                                      can_send_media_messages=False,
                                      can_send_other_messages=False)
     def get_chat_id(self, bot, update):
-        update.message.reply_text('{}'.format(update.message.chat.d),
+        update.message.reply_text('{}'.format(update.message.chat.id),
                                   quote=True)
     def error(self, bot, update, error):
         logger.warning('Update "%s" caused error "%s"', update, error)
